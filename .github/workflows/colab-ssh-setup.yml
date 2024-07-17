@@ -1,0 +1,14 @@
+name: Colab SSH Setup
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Google Colab SSH
+      run: bash ./scripts/colab_ssh_setup.sh
